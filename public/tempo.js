@@ -5,14 +5,17 @@
 
 
 
-$( function() {
-    $( "#draggable2" ).draggable({ axis: "x" });
-
-  } );
-
-
-$('.drag2').draggable({ axis: "x"});
+// $( function() {
+//     $( "#draggable2" ).draggable({ axis: "x" });
+//
+//   } );
+//
+//
+// $('.drag2').draggable({ axis: "x"});
 
 // function init() {
 //   $('.drag2').draggable();
 // }
+
+
+$('#datepicker').datepicker();

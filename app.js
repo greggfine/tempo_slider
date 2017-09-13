@@ -33,7 +33,7 @@ app.post('/', function(req, res){
 
   connection.query('INSERT INTO tempo SET ?', newTempo, function(err, result) {
     if (err) throw err;
-    console.log(result);
+    res.redirect('/');
   })
 })
 
