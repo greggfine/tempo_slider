@@ -1,21 +1,28 @@
-// $('.block').on('click', function() {
-//   $(this).slider();
-// })
+let tempo = 0;
+
+$("#datepicker").datepicker();
+
+$("#slower").on("click", function() {
+  if (tempo >= 1) {
+    $("#count").text((tempo -= 1));
+  }
+  $("#tempoField").val(tempo);
+});
+
+$("#slower10").on("click", function() {
+  if (tempo >= 1) {
+    $("#count").text((tempo -= 10));
+  }
+  $("#tempoField").val(tempo);
+});
+
+$("#faster").on("click", function() {
+  $("#count").text((tempo += 1));
+  $("#tempoField").val(tempo);
+});
 
 
-
-
-// $( function() {
-//     $( "#draggable2" ).draggable({ axis: "x" });
-//
-//   } );
-//
-//
-// $('.drag2').draggable({ axis: "x"});
-
-// function init() {
-//   $('.drag2').draggable();
-// }
-
-
-$('#datepicker').datepicker();
+$("#faster10").on("click", function() {
+  $("#count").text((tempo += 10));
+  $("#tempoField").val(tempo);
+});

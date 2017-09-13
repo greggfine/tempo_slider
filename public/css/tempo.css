@@ -3,7 +3,10 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Arial', 'san-serif'; }
+  font-family: 'mono';
+  background-color: #a0abb5;
+
+}
 
 .container {
   max-width: 1200px;
@@ -51,6 +54,7 @@ ul li {
 
   form input {
     padding: 10px;
+    margin-right: 10px;
   }
 
 form input:first-child {
@@ -60,10 +64,19 @@ form input:first-child {
 form input:nth-of-type(3) {
   width: 60px;
 }
+form input:last-child {
+  border-radius: 12px;
+  border: none;
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 5px 4px 8px #4c4547;
+
+}
 
 .results {
   border: 1px solid black;
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -73,25 +86,32 @@ form input:nth-of-type(3) {
 
 table tr td {
   padding: 20px;
+  font-size: .9em;
 }
 
 table tr:nth-of-type(odd) {
-  background-color: rgba(176, 111, 111, 0.08);
+  background-color: rgba(255, 239, 126, 0.3);
+
 
 }
 
 table th {
   text-decoration: underline;
+  padding: 16px;
+  font-size: 1.5em;
 }
 
 .metronome {
   width: 600px;
   height: 300px;
   border: 1px solid grey;
-  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.29);
+  box-shadow: 16px 20px 6px 6px rgba(0, 0, 0, 0.29);
+
   margin: auto;
   margin-top: 120px;
   position: relative;
+  background-image: url('../img/wood4.jpg');
+
 }
 
 .metronome-counter {
@@ -104,27 +124,50 @@ table th {
   position: absolute;
   top: -20%;
   left: 25%;
+  background-color: #f6f6f6;
 }
 
 .buttons {
   position: absolute;
-  top: 163%;
-  left: 30%;
+  top: 127%;
+left: 22%;
+
 }
 
 #slower {
-  margin-right: 33px;
-  border-radius: 44px;
-  border: none;
-  padding: 9px;
+  background-color: #a8a79c;
+
+
+}
+
+#slower10 {
+  background-color: #a8a79c;
+
 
 }
 
 #faster {
-  margin-right: 33px;
-  border-radius: 44px;
-  border: none;
-  padding: 9px;
+  background-color: #7b7b7b;
+
+}
+
+#faster10 {
+  background-color: #7b7b7b;
+
+  width: 86px;
+}
+
+.btn-detail {
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 11px;
+    border-radius: 6px;
+    border: none;
+    margin-right: 33px;
+    text-shadow: 1px 1px 4px grey;
+
+
 }
 
 #bpm-counter {
