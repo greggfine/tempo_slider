@@ -1,6 +1,13 @@
 <% include partials/header  %>
 
-
+<div class="form">
+  <form action="/" method="POST">
+    <input type="text" placeholder="Exercise Name" name="exercise">
+    <input type="text" placeholder="Date" name="date">
+    <input type="text" placeholder="Tempo" name="tempo">
+    <input type="submit">
+  </form>
+</div>
 
 <div class="results">
   <table>
@@ -13,36 +20,17 @@
 
 
 
-   <tr>
-    <td> <%= results[0]["exercise"] %></td>
-    <td> <%= results[0]["date"] %></td>
-    <td> <%= results[0]["tempo"] %></td>
-  </tr>
-
+<% results.forEach(function(result) { %>
   <tr>
-    <td><%= results[1]["exercise"] %></td>
-    <td> <%= results[1]["date"] %></td>
-    <td> <%= results[1]["tempo"] %></td>
-  </tr>
+   <td> <%= result["exercise"] %></td>
+   <td> <%= result["date"] %></td>
+   <td> <%= result["tempo"] %></td>
+ </tr>
+<% })   %>
 
-  <tr>
-    <td><%= results[2]["exercise"] %></td>
-    <td> <%= results[2]["date"] %></td>
-    <td> <%= results[2]["tempo"] %></td>
-  </tr>
 
 
 </table>
-</div>
-
-
-<div class="form">
-  <form action="/" method="POST">
-    <input type="text" placeholder="Exercise" name="exercise">
-    <input type="text" placeholder="Date" name="date">
-    <input type="text" placeholder="Tempo" name="tempo">
-    <input type="submit">
-  </form>
 </div>
 
 
