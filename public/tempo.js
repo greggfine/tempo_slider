@@ -11,27 +11,26 @@ let sound = new Howl ( {
 
 $("#datepicker").datepicker();
 
-$("#slower").on("click", function() {
+$("#slower").mousehold(200, function() {
   if (tempo >= 1) {
     $("#count").text((tempo -= 1));
   }
   $("#tempoField").val(tempo);
 });
 
-$("#slower10").on("click", function() {
+$("#slower10").mousehold(200, function() {
   if (tempo >= 1) {
     $("#count").text((tempo -= 10));
   }
   $("#tempoField").val(tempo);
 });
 
-$("#faster").on("click", function() {
+$("#faster").mousehold(200, function() {
   $("#count").text((tempo += 1));
   $("#tempoField").val(tempo);
 });
 
-
-$("#faster10").on("click", function() {
+$("#faster10").mousehold(200, function() {
   $("#count").text((tempo += 10));
   $("#tempoField").val(tempo);
 });
